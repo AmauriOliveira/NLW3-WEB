@@ -1,3 +1,13 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=alert_status)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=code_smells)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=ncloc)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=bugs)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=security_rating)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=AmauriOliveira_NLW3-WEB&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=AmauriOliveira_NLW3-WEB)
+
 # Happy Front-end
 
   ![Happy](https://i.imgur.com/bkMWbMw.png)
