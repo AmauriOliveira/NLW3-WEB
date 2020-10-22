@@ -20,11 +20,13 @@ interface Orphanage {
 
 const OrphanagesMap: React.FC = () => {
   const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+
   useEffect(() => {
     api.get('orphanages').then(response => {
       setOrphanages(response.data);
     });
   }, []);
+
   return (
     <div id="page-map">
       <aside>
