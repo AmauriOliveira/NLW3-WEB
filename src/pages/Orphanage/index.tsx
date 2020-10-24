@@ -31,6 +31,7 @@ interface Orphanage {
 
 const Orphanage: React.FC = () => {
   const [orphanage, setOrphanage] = useState<Orphanage>();
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const { id } = useParams<OrphanageParams>();
 
@@ -50,11 +51,21 @@ const Orphanage: React.FC = () => {
 
       <main>
         <div className="orphanage-details">
-          <img src={orphanage.images[0].url} alt={orphanage.name} />
+          <img
+            src={orphanage.images[activeImageIndex].url}
+            alt={orphanage.name}
+          />
 
           <div className="images">
-            {orphanage.images.map(img => (
-              <button key={img.id} className="active" type="button">
+            {orphanage.images.map((img, index) => (
+              <button
+                key={img.id}
+                className={activeImageIndex === index ? 'active' : ''}
+                type="button"
+                onClick={() => {
+                  setActiveImageIndex(index);
+                }}
+              >
                 <img src={img.url} alt={orphanage.name} />
               </button>
             ))}
@@ -86,7 +97,13 @@ const Orphanage: React.FC = () => {
               </Map>
 
               <footer>
-                <a href="/">Ver rotas no Google Maps</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${orphanage.latitude},${orphanage.longitude}`}
+                >
+                  Ver rotas no Google Maps
+                </a>
               </footer>
             </div>
 
