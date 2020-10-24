@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -21,6 +22,7 @@ interface Orphanage {
   longitude: number;
   about: string;
   instructions: string;
+  whatsapp: string;
   opening_hours: string;
   open_on_weekends: boolean;
   images: Array<{
@@ -117,7 +119,7 @@ const Orphanage: React.FC = () => {
                 <FiClock size={32} color="#15B6D6" />
                 Segunda à Sexta
                 <br />
-                {orphanage.open_on_weekends}
+                {orphanage.opening_hours}
               </div>
               {orphanage.open_on_weekends ? (
                 <div className="open-on-weekends">
@@ -136,10 +138,16 @@ const Orphanage: React.FC = () => {
               )}
             </div>
 
-            <button type="button" className="contact-button">
-              <FaWhatsapp size={20} color="#FFF" />
-              Entrar em contato
-            </button>
+            <a
+              href={`https://api.whatsapp.com/send?phone=${orphanage.whatsapp}text=oi`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button type="button" className="contact-button">
+                <FaWhatsapp size={20} color="#FFF" />
+                Entrar em contato
+              </button>
+            </a>
           </div>
         </div>
       </main>

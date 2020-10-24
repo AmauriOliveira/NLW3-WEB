@@ -139,6 +139,9 @@
   border: 1px solid #FFBCD4;
   color: #FF669D;
 }
+.orphanage-details .orphanage-details-content a {
+  text-decoration: none;
+}
 
 .orphanage-details .orphanage-details-content button.contact-button {
   margin-top: 64px;
