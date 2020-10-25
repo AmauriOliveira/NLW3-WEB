@@ -67,10 +67,14 @@ const CreateOrphanage: React.FC = () => {
     }
 
     const selectedImages = Array.from(event.target.files);
+    const temp: File[] = [];
 
-    setImages(selectedImages);
+    images.forEach(image => temp.push(image));
+    selectedImages.forEach(image => temp.push(image));
 
-    const selectImagesPreview = selectedImages.map(image => {
+    setImages(temp);
+
+    const selectImagesPreview = temp.map(image => {
       return URL.createObjectURL(image);
     });
 
